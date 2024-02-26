@@ -26,13 +26,19 @@ import {
     Route,
     Router,
 } from "react-router-dom";
-import Statistics from '../Statistics/Statistics';
+
+import { useMediaQuery } from 'react-responsive';
+import NavbarMobile from '../Navbar/NavbarMobile';
 
 
 function App() {
     const auth = useSelector(useAuth);
     const grades = useSelector(useGrades);
     const errors = useSelector(useErrors);
+
+    const isMobile = useMediaQuery({
+        query: '(max-width: 1100px)'
+    })
 
     if(errors.fatal) return <Error />
     
@@ -41,7 +47,6 @@ function App() {
             <ThemeProvider>
                 {auth.token ? <Navbar /> : <></>}
                 <Routes>
-                    <Route path='/status' element={<Statistics />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/' element={auth.token ? <Frontpage /> : <Login />} />
                     <Route path='/messages' element={auth.token ? <Messages /> : <Login />} />

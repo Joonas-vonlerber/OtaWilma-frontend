@@ -187,6 +187,7 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+    
     .container {
         display: none;
     }
@@ -195,6 +196,14 @@ body {
         display: flex;
     }
 }
+
+@media screen and (max-height: 1000px) {
+    .container {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
 
 @media screen and (max-height: 600px) {
     .container {

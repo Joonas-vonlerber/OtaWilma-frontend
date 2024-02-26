@@ -2,7 +2,7 @@
 > Päivitetty 6.1.2024
 
 ## Kaikessa yksinkertaisuudessaan
-> OtaWilma ohjlemistona on Tarkoitettu **Oppilaiden** käytettäväksi. Ohjelmistoa voivat käyttää kaikki `espoo.inschool.fi` alle kuuluvat Wilman oppilaskäyttäjät
+> OtaWilma ohjelmistona on Tarkoitettu **Oppilaiden** käytettäväksi. Ohjelmistoa voivat käyttää kaikki `espoo.inschool.fi` alle kuuluvat Wilman oppilaskäyttäjät
 
 > OtaWilma **käsittelee** [[kts. 2]](#2-mitä-tietoja-käsitellään) listattuja tietoja, ja oppilaan halutessa voi **tallentaa** oppilaaseen liityviä tietoja [[kts. 4.]](#4-otawilma-tarjoaa-oppilaalle-mahdollisuuden-tallentaa-ja-jakaa-omia-kurssivalintojaan) listattuja tietoja. OtaWilma noudattaa tietosuojaselostettaan, mutta **ei ota** vastuuta oppilaan Wilma-käyttäjän turvallisuudesta ongelmatilanteissa. **Vastuu oppilaan Wilma-käyttäjästä on aina oppilaalla itsellään**
 <br>

@@ -1,0 +1,91 @@
+.top {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    background-color: red;
+    box-shadow: 0 0 15px var(--shadow-main);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    z-index: 5;
+}
+
+
+.top .links {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    min-height: 75px;
+
+
+    display: flex;
+    flex-direction: row;
+}
+
+.links .left,
+.links .middle,
+.links .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links .left {
+    width: calc(50% - 25px);
+}
+
+.links .middle {
+    width: 50px;
+}
+
+.links .right {
+    width: calc(50% - 25px);;
+}
+
+.middle .home {
+    width: 90%;
+    aspect-ratio: 1;
+
+    background-color: var(--accent-main);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-expanded {
+    background-color: blue;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links-expanded h1 {
+    height: 50px;
+    width: 50px;
+
+    margin: 10px;
+
+    background-color: green;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
