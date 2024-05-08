@@ -361,16 +361,11 @@ h6 strong {
 }
 
 /*
-    course hashes
-
-    "why the hell would they use different hashes for different schools, the course types are the same..."
-
-    thereforte, will only work for periods in:
-    "Espoon kesälukio 2022"
-    "Espoon kesälukio 2023"
-    "Otaniemen lukio 2021-2022"
-    "Otaniemen lukio 2022-2023"
-    "Otaniemen lukio 21-22, opiskelijat 18, 19 ja 20"
+rgb(238, 238, 238) debugger eval code:21:11
+-  ksuor-off disa debugger eval code:23:13
+-  ksuor-off debugger eval code:23:13
+rgb(191, 191, 255) debugger eval code:21:11
+-  kF76F34DE_50868-off
 */
 
 .ksuor-off,
@@ -403,14 +398,16 @@ h6 strong {
 .kAB14633F_1388-off,
 .kB5DAF4F1_27576-off,
 .k5C1BC722_1174-off,
-.kD2F126D9_1381-off {
+.kD2F126D9_1381-off,
+.kF76F34DE_50713-off {
     background-color: var(--L2021-mandatory-main);
 }
 
 .kCFC108FF_50717-off,
 .k70F27363_35249-off,
 .kB5DAF4F1_27580-off,
-.kD2F126D9_1892-off {
+.kD2F126D9_1892-off,
+.kF76F34DE_50717-off {
     background-color: var(--L2021-g-optional-main);
 }
 
@@ -420,7 +417,8 @@ h6 strong {
 .kB5DAF4F1_29537-off,
 .kB5DAF4F1_31827-off,
 .kB5DAF4F1_31827-off,
-.kD2F126D9_1945-off {
+.kD2F126D9_1945-off,
+.kF76F34DE_50721-off {
     background-color: var(--L2021-l-optional-main);
 }
 
@@ -439,7 +437,8 @@ h6 strong {
 .k5C1BC722_1188-off,
 .k5C1BC722_1217-off,
 .k5C1BC722_1662-off,
-.k70F27363_35766-off {
+.k70F27363_35766-off,
+.kF76F34DE_50868-off {
     background-color: var(--L2021-diploma-main);
 }
 
@@ -452,7 +451,8 @@ h6 strong {
 .kAB14633F_1388-on,
 .kB5DAF4F1_27576-on,
 .k5C1BC722_1174-on,
-.kD2F126D9_1381-on {
+.kD2F126D9_1381-on,
+.kF76F34DE_50713-on {
     background-color: var(--L2021-mandatory-selected);
     border: solid 3px black;
 
@@ -463,7 +463,8 @@ h6 strong {
 .kCFC108FF_50717-on,
 .k70F27363_35249-on,
 .kB5DAF4F1_27580-on,
-.kD2F126D9_1892-on {
+.kD2F126D9_1892-on,
+.kF76F34DE_50717-on {
     background-color: var(--L2021-g-optional-selected);
     border: solid 3px black;
 
@@ -474,7 +475,8 @@ h6 strong {
 .kCFC108FF_50721-on,
 .k70F27363_35253-on,
 .kAB14633F_1519-on,
-.kD2F126D9_1945-on {
+.kD2F126D9_1945-on,
+.kF76F34DE_50721-on {
     background-color: var(--L2016-l-optional-selected);
     border: solid 3px black;
 
@@ -505,7 +507,8 @@ h6 strong {
 .k5C1BC722_1188-on,
 .k5C1BC722_1217-on,
 .k5C1BC722_1662-on,
-.k70F27363_35766-on {
+.k70F27363_35766-on,
+.kF76F34DE_50868-on {
     background-color: var(--L2021-diploma-selected);
 }
 
