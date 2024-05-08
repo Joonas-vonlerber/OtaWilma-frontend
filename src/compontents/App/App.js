@@ -18,6 +18,7 @@ import Settings from '../Settings/Settings';
 import Maps from '../Maps/Maps';
 import Error from '../Error/Error';
 import YoResults from '../YoResults/YoResults';
+import Friends from '../Friends/Friends';
 
 import {
     BrowserRouter,
@@ -26,11 +27,18 @@ import {
     Router,
 } from "react-router-dom";
 
+import { useMediaQuery } from 'react-responsive';
+import NavbarMobile from '../Navbar/NavbarMobile';
+
 
 function App() {
     const auth = useSelector(useAuth);
     const grades = useSelector(useGrades);
     const errors = useSelector(useErrors);
+
+    const isMobile = useMediaQuery({
+        query: '(max-width: 1100px)'
+    })
 
     if(errors.fatal) return <Error />
     
@@ -45,6 +53,7 @@ function App() {
                     <Route path='/messages/:id' element={auth.token ? <Messages /> : <Login />} />
                     <Route path='/grades' element={auth.token ? <Gradebook /> : <Login />} />
                     <Route path='/yo-results' element={auth.token && grades.yoResults.length > 0 ? <YoResults /> : <Frontpage />} />
+                    <Route path='/friends' element={auth.token ? <Friends /> : <Login />}/>
                     <Route path='/news' element={auth.token ? <News /> : <Login />} />
                     <Route path='/news/:id' element={auth.token ? <News /> : <Login />} />
                     <Route path='/tray' element={auth.token ? <CourseTray /> : <Login />} />

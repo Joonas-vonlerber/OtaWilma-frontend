@@ -5,15 +5,14 @@ import { getConfig, useConfig } from '../../features/themes/configSlice';
 import { useGrades } from '../../features/grades/gradeSlice';
 import { logoutFromWilma } from '../../features/authentication/authSlice';
 
-import styles from './Navbar.module.css'
+import styles from './NavbarMobile.module.css'
 
-export default function Navbar() {
+export default function NavbarMobile() {
     const [count, setCount] = useState(0);
     const [expanded, setExpanded] = useState(false);
     const config = useSelector(useConfig);
     const grades = useSelector(useGrades);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     const links = {
         '/messages': 'Viestit',
@@ -74,24 +73,28 @@ export default function Navbar() {
 
     return (
         <div className={`${styles['top']} ${expanded ? styles['expanded'] : ''}`}>
-            <div className={styles['user-info']}>
-                <div className={styles['user-data']}>
-                    <h1>{config.value ? username(config.value['username']) : '...'}</h1>
-                    <h2>Opiskelija</h2>
-                    <div className={styles['logout']} id="logout">
-                    <a onClick={() => dispatch(logoutFromWilma())}>Kirjaudu ulos</a>
+            <div className={styles['links']}>
+                <div className={styles['left']}>
+
+                </div>
+                <div className={styles['middle']}>
+                    <div className={styles['home']}>
+                        <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>O</h1></Link>
                     </div>
                 </div>
+                <div className={styles['right']}>
+
+                </div>
             </div>
-            <div className={styles['links']}>
-                <Link className={styles['logo-text']} to={'/'} onClick={onRedirect}><h1>OtaWilma</h1></Link>
-                {grades.yoResults.length > 0 ? <Link to={'/yo-results'} ><h5>Ylioppilaskirjoitukset</h5></Link> : null}
-                {Object.keys(links).slice(0, count).map(href => {
-                    return <Link onClick={onRedirect} to={href}><h5>{links[href]}</h5></Link>
-                })}
-                {(expanded || count < 9) ? <button onClick={onExpand} className={styles['expand']}>{<h1>...</h1>}</button> : null}
+            <div className={styles['links-expanded']}>
+                <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>1</h1></Link>
+                <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>2</h1></Link>
+                <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>3</h1></Link>
+                <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>4</h1></Link>
+                <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>2</h1></Link>
+                <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>3</h1></Link>
+                <Link className={styles['logo']} to={'/'} onClick={onRedirect}><h1>4</h1></Link>
             </div>
-            
         </div>
     )
 }

@@ -31,6 +31,6 @@ export default configureStore({
     teachers: teacherSlice,
     api: apiSlice,
     version: versionSlice,
-    rooms: roomSlice
+    rooms: roomSlice,
   },
 });
