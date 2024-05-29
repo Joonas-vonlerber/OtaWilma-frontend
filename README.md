@@ -56,6 +56,19 @@ To compile this, you need the file `config.json` in the project `src` directory.
 {
     "versionLabel": "LOCAL BUILD",
     "wilmaApi": "https://wilma.otawilma.fi/api",
-    "otaWilmaApi": "https://api.otawilma.fi/api"
+    "otaWilmaApi": "https://api.otawilma.fi/api",
+    "signature": "signature_here" // not security critical; only used for local password storage on frontend.
 }
+```
+
+## Buiding container
+
+Container for frontend can be generated with:
+```bash
+docker build . -t otawilma-frontend
+```
+
+Running container on port 8080:
+```bash
+docker run --rm -p 8080:80 otawilma-frontend
 ```
