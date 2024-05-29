@@ -10,7 +10,8 @@
 
 # production
 /build
-src/config.json
+/src/config.json
+.env
 
 # misc
 .DS_Store
