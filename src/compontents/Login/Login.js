@@ -15,7 +15,8 @@ import { useNavigate } from 'react-router-dom';
 import { BlurLayer } from '../LoadingScreen/LoadingScreen';
 import { useVersion } from '../../features/version/versionSlice';
 
-const { versionLabel } = require('../../config.json');
+const { REACT_APP_VERSION_LABEL } = process.env;
+const versionLabel = REACT_APP_VERSION_LABEL;
 
 
 export default function Login() {

@@ -8,7 +8,8 @@ import {
 import { handleError } from '../errors/errorSlice';
 import crypto from 'crypto-js';
 
-import config from '../../config.json'
+const { REACT_APP_SIGNATURE } = process.env;
+const signature = REACT_APP_SIGNATURE;
 
 export const loginToWilma = createAsyncThunk(
     'auth/loginToWilma',
@@ -77,11 +78,16 @@ export const setAgreement = () => {
 
 export const getSavedCredentials = () => {
     const encrypted = window.localStorage.getItem('saved-credentials');
-    if(!encrypted) window.localStorage.setItem('saved-credentials', null);
+    if(!encrypted) { 
+        window.localStorage.setItem('saved-credentials', null);
+        return null;
+    }
 
     if (encrypted === "null") return null;
+
+    console.log(encrypted);
     
-    const decrypted = crypto.AES.decrypt(encrypted, config.signature).toString(crypto.enc.Utf8);
+    const decrypted = crypto.AES.decrypt(encrypted, signature).toString(crypto.enc.Utf8);
     try {
         const credentials = JSON.parse(decrypted);
         return credentials;
@@ -93,7 +99,7 @@ export const getSavedCredentials = () => {
 
 export const setSavedCredentials = (credentials) => {
     const raw = JSON.stringify(credentials);
-    const encrypted = crypto.AES.encrypt(raw, config.signature);
+    const encrypted = crypto.AES.encrypt(raw, signature);
 
     return window.localStorage.setItem('saved-credentials', encrypted);
 }
