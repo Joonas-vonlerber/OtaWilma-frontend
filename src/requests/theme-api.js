@@ -5,9 +5,8 @@ import {
     cacheAvailable
 } from './utility'
 
-const { REACT_APP_OTAWILMA_API  } = process.env;
-const otaWilmaApi = REACT_APP_OTAWILMA_API;
-
+import config from '../config.json';
+const { otaWilmaApi } = config;
 
 const login = (auth) => {
     return new Promise(async (resolve, reject) => {

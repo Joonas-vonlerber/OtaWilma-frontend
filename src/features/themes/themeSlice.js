@@ -56,7 +56,6 @@ export const loadThemeDefault = createAsyncThunk(
     'themes/loadThemeDefault',
     async (options, thunkAPI) => {
         return await new Promise((resolve, reject) => {
-            console.log(process.env);
             const themes = thunkAPI.getState().themes;
             const id = options['id'];
             

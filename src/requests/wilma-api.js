@@ -8,8 +8,8 @@ import {
 
 import { login as loginToOtaWilma } from './theme-api'
 
-const { REACT_APP_WILMA_API } = process.env;
-const wilmaApi = REACT_APP_WILMA_API;
+import config from '../config.json';
+const { wilmaApi } = config;
 
 const login = (credentials) => {
     return new Promise((resolve, reject) => {

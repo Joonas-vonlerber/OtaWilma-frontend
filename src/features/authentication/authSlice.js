@@ -8,8 +8,8 @@ import {
 import { handleError } from '../errors/errorSlice';
 import crypto from 'crypto-js';
 
-const { REACT_APP_SIGNATURE } = process.env;
-const signature = REACT_APP_SIGNATURE;
+import config from '../../config.json';
+const { signature } = config;
 
 export const loginToWilma = createAsyncThunk(
     'auth/loginToWilma',
@@ -84,8 +84,6 @@ export const getSavedCredentials = () => {
     }
 
     if (encrypted === "null") return null;
-
-    console.log(encrypted);
     
     const decrypted = crypto.AES.decrypt(encrypted, signature).toString(crypto.enc.Utf8);
     try {
